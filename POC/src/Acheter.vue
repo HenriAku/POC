@@ -14,14 +14,6 @@ import Card from './components/Card.vue'
     <template v-slot:main>
       <div class="columns is-multiline">
         <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
       </div>
     </template>
     <template v-slot:footer>

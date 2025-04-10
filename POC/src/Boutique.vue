@@ -13,15 +13,14 @@ import Card from './components/Card.vue'
     </template>
     <template v-slot:main>
       <div class="columns is-multiline">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
+        <Card class="cell"></Card>
       </div>
     </template>
     <template v-slot:footer>
