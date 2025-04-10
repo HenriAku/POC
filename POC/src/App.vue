@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Page from './components/Page.vue'
-import NavBar from './components/NavBar.vue'
+  import HelloWorld from './components/HelloWorld.vue'
+  import Page from './components/Page.vue'
+  import NavBar from './components/NavBar.vue'
+  import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import NavBar from './components/NavBar.vue'
       main
     </template>
     <template v-slot:footer>
-      footer
+      <Footer></Footer>
     </template>
   </Page>
 </template>
