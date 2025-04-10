@@ -1,6 +1,36 @@
 <script setup lang="ts">
   import HelloWorld from './components/HelloWorld.vue'
   import Page from './components/Page.vue'
+  import { ref } from "vue";
+  
+  const slide = ref(0)
+  let totalSlide = ref(3)
+
+  const nextSlide = () => {
+    slide.value = (slide.value + 1) % totalSlide.value
+    console.log(slide.value)
+    updateCarousel()
+  }
+
+  const prevSlide = () => {
+    slide.value = (slide.value - 1 + totalSlide.value) % totalSlide.value
+    console.log(slide.value)
+    updateCarousel()
+  }
+
+  const updateCarousel = () => {
+    const lstItem = document.getElementsByClassName("carousel-item");
+    
+    for (let i = 0; i < lstItem.length; i++) {
+      lstItem[i].classList.add('is-hidden');
+    }
+    
+    const currentItem = document.getElementById("item" + slide.value);
+    if (currentItem) {
+      currentItem.classList.remove('is-hidden');
+    }
+  };
+
 </script>
 
 <template>
@@ -13,22 +43,45 @@
 				</div>
       </section>
       <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio suscipit sit magni, ab quis cupiditate laudantium nesciunt ratione rerum esse cum laborum distinctio. Tempora aliquid perferendis minima dolore consequatur veniam!
-        Quod eos delectus modi amet architecto explicabo perferendis eius, reiciendis iure asperiores, optio error! Excepturi ratione provident magnam quod, voluptatibus deserunt! Voluptates aperiam non, corporis aut unde fugiat ut facere.
-        Atque mollitia pariatur soluta placeat fuga aperiam quo magnam tenetur odio, eaque dolore nesciunt commodi nam ex nemo eius corrupti, architecto debitis. Consequuntur quaerat corrupti officia id minima delectus nihil.
-        Quisquam, quas! Amet quas cum ut quaerat fugit laboriosam neque consequatur eos expedita, a quos itaque aliquam nobis recusandae pariatur aspernatur esse odio similique minima harum repudiandae nisi deserunt! Recusandae!
-        Ratione voluptate architecto eum distinctio placeat officia labore blanditiis sint recusandae! Quisquam, facilis iste! Illo similique iste quae repellat aliquid laboriosam maxime debitis velit harum. Doloribus libero sapiente voluptates numquam.
-        Ex nesciunt quia ut, perspiciatis commodi assumenda odit aut enim quas animi aliquam quis hic harum repellendus perferendis molestiae eaque facilis possimus impedit eligendi. Nobis expedita tenetur aliquid veritatis inventore?
-        Iure ipsa veniam architecto eligendi iste culpa quidem, nesciunt maxime. Aut quibusdam ad porro dolore voluptatibus exercitationem, libero adipisci harum minima accusamus temporibus quas necessitatibus nesciunt, cum enim labore veritatis?
-        Sunt odio ipsam vel cumque eius dolorum nostrum odit velit illum! Earum fugiat facilis quisquam quasi molestias, quae eveniet perspiciatis aliquam debitis, possimus repellat assumenda! Iste at sapiente magnam doloremque.
-        Repudiandae, velit. Veniam quaerat nam mollitia officiis! Odit ut, officia debitis quod libero laudantium nisi voluptas soluta vero, molestias aut delectus rem totam commodi, nostrum tempore blanditiis. Deleniti, accusamus dolorum.
-        Molestias totam laboriosam dignissimos magnam in tempora, iure doloribus ipsum pariatur cupiditate eius exercitationem similique culpa odit vitae dolorum iusto hic est aperiam voluptatum numquam. Et repudiandae ullam harum! Ipsam!</p>
+        <div class="container">
+          <div class="carousel columns mt-6 mb-6">
+            <button class="button is-primary mr-6" @click="prevSlide"><</button>
+            <div class="carousel-container">
+              <div id="item0" class="carousel-item">
+              <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur a ipsam assumenda? Sed alias, doloribus commodi quam ut quidem, eaque explicabo nostrum eligendi ipsum iusto, repellat quasi iste inventore.</p>
+              </div>
+              <div id="item1" class="carousel-item">
+                <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur a ipsam assumenda? Sed alias, doloribus commodi quam ut quidem, eaque explicabo nostrum eligendi ipsum iusto, repellat quasi iste inventore.</p>
+              </div>
+              <div id="item2" class="carousel-item">
+                <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur a ipsam assumenda? Sed alias, doloribus commodi quam ut quidem, eaque explicabo nostrum eligendi ipsum iusto, repellat quasi iste inventore.</p>
+              </div>
+            </div>
+            <button class="button is-primary ml-6"  @click="nextSlide">></button>
+          </div>
+        </div>
       </section>
     </template>
   </Page>
 </template>
 
 <style>
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
 .hero {
   position: relative;
   overflow: hidden;

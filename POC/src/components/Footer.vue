@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="has-text-centered">
-			@copyright Salamander Esport
+			@Copyright Salamander Esport
 		</div>
 	</footer>
 </template>
