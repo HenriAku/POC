@@ -1,11 +1,8 @@
 <template>
-	<nav class="footer has-background-black" role="navigation">
-		<div class="navbar-menu">
-			<div class="navbar-start">
-				<a class="navbar-item has-text-white" href="index.html">Home</a>
-				<a class="navbar-item has-text-white" href="Boutique.html">Boutique</a>
-				<a class="navbar-item has-text-white" href="">Classement</a>
-				<a class="navbar-item has-text-white" href="">Association</a>
+	<nav class="footer has-background-link" role="navigation">
+		<div class="content has-text-centered">
+			<div>
+				<img src="../assets/logo_salamander_esport.svg" alt="">
 			</div>
 		</div>
 	</nav>
