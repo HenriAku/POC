@@ -3,7 +3,7 @@
 	<div class="card-image">
 	  <figure class="image">
 		<img
-		  src="./assets/logo"
+		  src="../assets/logo_salamander_esport.svg"
 		  alt="Placeholder image"
 		/>
 	  </figure>
@@ -23,14 +23,14 @@
 		  <p class="subtitle is-6">@johnsmith</p>
 		</div>
 	  </div>
-  
+	    
 	  <div class="content">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-		iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-		<a href="#">#responsive</a>
-		<br />
-		<time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+		Vend Salamandre en biengin
 	  </div>
 	</div>
   </div>
 </template>
+
+<style>
+
+</style>

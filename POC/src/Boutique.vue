@@ -12,7 +12,7 @@ import Card from './components/Card.vue'
       <NavBar></NavBar>
     </template>
     <template v-slot:main>
-      <Card></Card>
+      <Card class="has-background-link"></Card>
     </template>
     <template v-slot:footer>
       bilel
