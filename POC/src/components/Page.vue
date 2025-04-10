@@ -1,7 +1,12 @@
+<script setup lang="ts">
+  import NavBar from './components/NavBar.vue'
+  import Footer from './components/Footer.vue'
+</script>
+
 <template>
 	<div class="has-background-white">
 		<header>
-			<slot name="header"></slot>
+			<NavBar></NavBar>
 		</header>
 
 		<div class="container">
@@ -11,7 +16,7 @@
 		</div>
 
 		<footer>
-			<slot name="footer"></slot>
+			<Footer></Footer>
 		</footer>
 	</div>
 </template>
