@@ -10,8 +10,8 @@
 					<button class="hoverable button has-background-primary has-text-primary">Contacter-nous</button>
 				</div>
 				<div class="cell columns mt-6">
-					<a href=""><img src="../assets/discord.png" alt=""  class="image is-48x48 mr-5"></a>
-					<a href=""><img src="../assets/twitter.png" alt=""  class="image is-48x48"></a>
+					<a href="https://discord.gg/y7w59V5d"><img src="../assets/discord.png" alt=""  class="image is-48x48 mr-5"></a>
+					<a href="https://x.com/SalamanderFGC"><img src="../assets/twitter.png" alt=""  class="image is-48x48"></a>
 				</div>
 			</div>
 		</div>
