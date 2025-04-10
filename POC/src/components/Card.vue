@@ -25,11 +25,17 @@
 					<div class="field is-grouped mt-3">
 						<div class="control">
 							<details class="dropdown is-block">
-								<summary class="button has-background-primary has-text-primary">Tailles</summary>
-								<div class="dropdown-menu is-block">
-									<div class="dropdown-content">
-										<a href="#" class="dropdown-item">Option 1</a>
-										<a href="#" class="dropdown-item">Option 2</a>
+								<summary class="button hoverable has-background-primary has-text-primary">Tailles</summary>
+								<div class="dropdown-menu is-block has-background-link">
+									<div class="dropdown-content has-background-link">
+										<ul>
+											<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XXL</a></li>
+											<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XL</a></li>
+											<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">L</a></li>
+											<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">M</a></li>
+											<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">S</a></li>
+											<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XS</a></li>
+										</ul>
 									</div>
 								</div>
 							</details>

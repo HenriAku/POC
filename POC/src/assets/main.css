@@ -23,3 +23,7 @@
   background-color: #fed07a !important;
   color: #ef7e65 !important;
 }
+
+.w-50 {
+  width: 150%;
+}
