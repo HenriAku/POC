@@ -1,4 +1,8 @@
 .has-text-primary {
+  color: #fed07a !important;
+}
+
+.has-text-info {
   color: #ef7e65 !important;
 }
 
