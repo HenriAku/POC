@@ -1,5 +1,5 @@
 <template>
-	<nav class="footer has-background-link" role="navigation">
+	<footer class="footer has-background-link" role="navigation">
 		<div class="fixed-grid has-5-cols">
 			<div class="grid">
 				<div class="cell columns">
@@ -18,5 +18,6 @@
 		<div class="has-text-centered">
 			@copyright Salamander Esport
 		</div>
-	</nav>
+	</footer>
 </template>
+

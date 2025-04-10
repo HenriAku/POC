@@ -9,7 +9,7 @@
 			<NavBar></NavBar>
 		</header>
 
-		<div class="container">
+		<div class="page-container">
 			<main>
 				<slot name="main"></slot>
 			</main>
@@ -20,3 +20,12 @@
 		</footer>
 	</div>
 </template>
+
+
+<style scoped>
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh; 
+}
+</style>
