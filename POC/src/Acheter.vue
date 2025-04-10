@@ -25,7 +25,6 @@ import Card from './components/Card.vue'
       </div>
     </template>
     <template v-slot:footer>
-      bilel
     </template>
   </Page>
 </template>
