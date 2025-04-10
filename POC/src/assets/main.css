@@ -18,3 +18,8 @@
 .hoverable:hover{
   background-color: #fed07a;
 }
+
+.button.hoverable:hover {
+  background-color: #fed07a !important;
+  color: #ef7e65 !important;
+}
