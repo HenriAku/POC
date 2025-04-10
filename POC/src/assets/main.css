@@ -10,3 +10,7 @@
   background-color: #496470 !important;
 
 }
+
+.hoverable:hover{
+  background-color: #fed07a;
+}

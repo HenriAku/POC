@@ -19,11 +19,11 @@
 		  </figure>
 		</div>
 		<div class="media-content">
-		  <p class="title is-4">John Smith</p>
+		  <p class="title is-4 has-text-primary">John Smith</p>
 		  <p class="subtitle is-6">@johnsmith</p>
 		</div>
 	  </div>
-	    
+
 	  <div class="content">
 		Vend Salamandre en biengin
 	  </div>
