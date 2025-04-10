@@ -1,3 +1,7 @@
 .has-text-primary {
   color: #ef7e65 !important;
 }
+
+.has-background-primary{
+  background-color: #ef7e65 !important;
+}
