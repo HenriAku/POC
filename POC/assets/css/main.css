@@ -1,0 +1,26 @@
+.has-text-primary {
+	color: #fed07a !important;
+  }
+  
+  .has-text-info {
+	color: #ef7e65 !important;
+  }
+  
+  .has-background-primary{
+	background-color: #ef7e65 !important;
+  }
+  
+  .has-background-link{
+	background-color: #496470 !important;
+  
+  }
+  
+  .hoverable:hover{
+	background-color: #fed07a;
+  }
+  
+  .button.hoverable:hover {
+	background-color: #fed07a !important;
+	color: #ef7e65 !important;
+  }
+  

@@ -50,10 +50,10 @@
               <div id="item0" class="carousel-item">
               <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur a ipsam assumenda? Sed alias, doloribus commodi quam ut quidem, eaque explicabo nostrum eligendi ipsum iusto, repellat quasi iste inventore.</p>
               </div>
-              <div id="item1" class="carousel-item">
+              <div id="item1" class="carousel-item is-hidden">
                 <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur a ipsam assumenda? Sed alias, doloribus commodi quam ut quidem, eaque explicabo nostrum eligendi ipsum iusto, repellat quasi iste inventore.</p>
               </div>
-              <div id="item2" class="carousel-item">
+              <div id="item2" class="carousel-item is-hidden">
                 <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur a ipsam assumenda? Sed alias, doloribus commodi quam ut quidem, eaque explicabo nostrum eligendi ipsum iusto, repellat quasi iste inventore.</p>
               </div>
             </div>
