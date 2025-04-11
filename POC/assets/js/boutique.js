@@ -1,5 +1,5 @@
-"use strict";
-const Boutique = {
+const { createApp, ref } = Vue;
+const App = {
     components: {
         NavBar,
         Card,

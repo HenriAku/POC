@@ -17,7 +17,7 @@
 	  "./assets/typescript/**/*.ts"            // Inclut tous les fichiers TS dans le dossier "typescript" et ses sous-dossiers
 	],
 	"exclude": [
-	  "node_modules"
+	  "../node_modules"
 	]
   }
   

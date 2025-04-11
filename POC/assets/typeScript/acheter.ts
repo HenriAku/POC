@@ -1,6 +1,8 @@
+export {};
+declare const Vue: any;
+const { createApp, ref } = Vue;
 
-
-const Article = {
+const App = {
 	components: {
 		NavBar,
 		Card,

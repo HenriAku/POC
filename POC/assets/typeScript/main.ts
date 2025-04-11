@@ -1,4 +1,3 @@
-
 declare const Vue: any;
 
 const { createApp, ref } = Vue;
