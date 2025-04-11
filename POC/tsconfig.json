@@ -6,7 +6,7 @@
 	  "strict": true,                          // Mode strict pour détecter plus d'erreurs
 	  "esModuleInterop": true,                 // Permet d'importer des modules CommonJS
 	  "skipLibCheck": true,                    // Ne pas vérifier les types des fichiers de déclaration
-	  "outDir": "./dist",                        // Dossier de sortie des fichiers compilés (dossier "js" au même niveau que "typescript")
+	  "outDir": "./assets/js",                        // Dossier de sortie des fichiers compilés (dossier "js" au même niveau que "typescript")
 	  "rootDir": "./assets/typescript",        // Dossier source pour les fichiers TS
 	  "allowJs": true,                         // Permet de traiter les fichiers JS
 	  "jsx": "preserve",                       // Gère JSX si tu veux l'utiliser

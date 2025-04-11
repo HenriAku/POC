@@ -37,6 +37,29 @@ const Footer = {
 			</footer>
 		`
 };
+const Page = {
+    components: {
+        NavBar,
+        Footer
+    },
+    template: `
+			<div class="has-background-white">
+				<header>
+					<NavBar />
+				</header>
+
+				<div class="page-container">
+					<main>
+						<slot name="main"></slot>
+					</main>
+				</div>
+
+				<footer>
+					<Footer />
+				</footer>
+			</div>
+			`
+};
 const Card = {
     template: `
 		<div class="columns is-centered m-4">

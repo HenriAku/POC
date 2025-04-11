@@ -23,4 +23,50 @@
 	background-color: #fed07a !important;
 	color: #ef7e65 !important;
   }
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh; 
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  background-image: url("assets/vague_salamander_esport.svg");
+  background-size: cover;
+  background-position:right;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+
+.hero img{
+  width: 256px;
+  height: 256px;
+}
   
