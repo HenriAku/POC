@@ -1,6 +1,48 @@
 // @ts-ignore  
 const { createApp, ref } = Vue;
 
+async function loadConfig() {
+	const response = await fetch('config.json');
+	return await response.json();
+}
+loadConfig()
+  .then(config => {
+    const API_KEY = config.YOUTUBE_API_KEY;
+    const CHANNEL_ID = config.YOUTUBE_CHANNEL_ID;
+    YoutubeVideo(API_KEY, CHANNEL_ID);
+  })
+  .catch(error => {
+    console.error("Erreur:", error);
+  });
+
+async function YoutubeVideo (API_KEY: string, CHANNEL_ID:string) {
+	const youtubeRep = await fetch(
+		`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${API_KEY}`
+	);
+
+	const data = await youtubeRep.json();
+	const uploadsPlaylistId = data.items[0].contentDetails.relatedPlaylists.uploads;
+
+	const videosResponse = await fetch(
+		`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${uploadsPlaylistId}&key=${API_KEY}`
+	  );
+	const videosData = await videosResponse.json();
+
+	console.log(videosData)
+	const section = document.getElementById("video") as HTMLElement;
+	const videoId = videosData.items[0].snippet.resourceId.videoId;
+	section.innerHTML = `
+				<iframe 
+					width="560" 
+					height="315" 
+					src="https://www.youtube-nocookie.com/embed/${videoId}" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+				`;
+}
+
 const App = {
   components: {
     Page
@@ -55,22 +97,26 @@ const App = {
               <button class="button is-primary mr-6" @click="prevSlide"><</button>
               <div class="carousel-container">
                 <div id="item0" class="carousel-item">
-                  <p>1 Lorem ipsum dolor sit amet...</p>
+                  <p>1     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quidem provident rem placeat soluta officiis, sequi quae vel quia eligendi voluptates dolor! Consequatur, quo fugiat. Nihil exercitationem fugiat voluptas quo?</p>
                 </div>
                 <div id="item1" class="carousel-item is-hidden">
-                  <p>2 Lorem ipsum dolor sit amet...</p>
+                  <p>2     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quidem provident rem placeat soluta officiis, sequi quae vel quia eligendi voluptates dolor! Consequatur, quo fugiat. Nihil exercitationem fugiat voluptas quo?</p>
                 </div>
                 <div id="item2" class="carousel-item is-hidden">
-                  <p>3 Lorem ipsum dolor sit amet...</p>
+                  <p>3     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quidem provident rem placeat soluta officiis, sequi quae vel quia eligendi voluptates dolor! Consequatur, quo fugiat. Nihil exercitationem fugiat voluptas quo?</p>
                 </div>
               </div>
               <button class="button is-primary ml-6" @click="nextSlide">></button>
             </div>
           </div>
         </section>
+
+		<section id="video">
+		</section>
       </template>
     </Page>
   `
 };
+
 
 createApp(App).mount('#app');

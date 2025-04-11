@@ -58,7 +58,7 @@
   right: 0;
   width: 80%;
   height: 80%;
-  background-image: url("assets/vague_salamander_esport.svg");
+  background-image: url("../images/vague_salamander_esport.svg");
   background-size: cover;
   background-position:right;
   transform: scaleX(-1);
