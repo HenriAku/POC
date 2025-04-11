@@ -6,16 +6,15 @@
 	  "strict": true,                          // Mode strict pour détecter plus d'erreurs
 	  "esModuleInterop": true,                 // Permet d'importer des modules CommonJS
 	  "skipLibCheck": true,                    // Ne pas vérifier les types des fichiers de déclaration
-	  "outDir": "./assets/js",                 // Dossier de sortie des fichiers compilés
-	  "rootDir": "./",                         // Dossier source
+	  "outDir": "./assets/js",                        // Dossier de sortie des fichiers compilés (dossier "js" au même niveau que "typescript")
+	  "rootDir": "./assets/typescript",        // Dossier source pour les fichiers TS
 	  "allowJs": true,                         // Permet de traiter les fichiers JS
 	  "jsx": "preserve",                       // Gère JSX si tu veux l'utiliser
-	  "resolveJsonModule": true,                // Permet d'importer des fichiers JSON
+	  "resolveJsonModule": true,               // Permet d'importer des fichiers JSON
 	  "lib": ["dom", "esnext"]
 	},
 	"include": [
-	  "./assets/typescript/**/*.ts",  // Assure-toi que tu as des fichiers TS dans ce répertoire et dans ses sous-dossiers
-	  "./assets/js/**/*.ts"
+	  "./assets/typescript/**/*.ts"            // Inclut tous les fichiers TS dans le dossier "typescript" et ses sous-dossiers
 	],
 	"exclude": [
 	  "node_modules"
