@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 declare const Vue: any;
+=======
+// @ts-ignore  
+>>>>>>> 776743a4f6c919f932c8c73d126be60ab864e660
 
 const { createApp, ref } = Vue;
 
-const App = {
+const Acheter = {
 	components: {
 		NavBar,
 		Card,
@@ -18,4 +22,4 @@ const App = {
 	`
 };
 
-createApp(App).mount('#acheter');
+createApp(Acheter).mount('#acheter');

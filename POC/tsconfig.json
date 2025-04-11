@@ -14,7 +14,8 @@
 	  "lib": ["dom", "esnext"]
 	},
 	"include": [
-	  "./assets/typescript/**/*.ts"            // Inclut tous les fichiers TS dans le dossier "typescript" et ses sous-dossiers
+	  "./assets/typescript/**/*.ts"     ,       // Inclut tous les fichiers TS dans le dossier "typescript" et ses sous-dossiers
+	  "./assets/typescript/**/declaration.d.ts"  // Inclut vos déclarations
 	],
 	"exclude": [
 	  "../node_modules"
