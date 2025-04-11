@@ -1,6 +1,5 @@
 "use strict";
-const { createApp, ref } = Vue;
-const App = {
+const Article = {
     components: {
         NavBar,
         Card,

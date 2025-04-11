@@ -2,7 +2,8 @@ declare const Vue: any;
 
 const { createApp, ref } = Vue;
 
-const App = {
+
+const Boutique = {
 	components: {
 		NavBar,
 		Card,
