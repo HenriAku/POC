@@ -1,4 +1,3 @@
-"use strict";
 const { createApp, ref } = Vue;
 const App = {
     components: {
@@ -22,3 +21,4 @@ const App = {
 	`
 };
 createApp(App).mount('#boutique');
+export {};
