@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+	  "target": "es6",                         // Compilation vers ES6
+	  "module": "esnext",                      // Module dynamique
+	  "moduleResolution": "node",              // Résolution des modules comme en Node.js
+	  "strict": true,                          // Mode strict pour détecter plus d'erreurs
+	  "esModuleInterop": true,                 // Permet d'importer des modules CommonJS
+	  "skipLibCheck": true,                    // Ne pas vérifier les types des fichiers de déclaration
+	  "outDir": "./assets/js",                 // Dossier de sortie des fichiers compilés
+	  "rootDir": "./",                         // Dossier source
+	  "allowJs": true,                         // Permet de traiter les fichiers JS
+	  "jsx": "preserve",                       // Gère JSX si tu veux l'utiliser
+	  "resolveJsonModule": true,                // Permet d'importer des fichiers JSON
+	  "lib": ["dom", "esnext"]
+	},
+	"include": [
+	  "./assets/typescript/**/*.ts",  // Assure-toi que tu as des fichiers TS dans ce répertoire et dans ses sous-dossiers
+	  "./assets/js/**/*.ts"
+	],
+	"exclude": [
+	  "node_modules"
+	]
+  }
+  

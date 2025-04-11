@@ -1,5 +1,3 @@
-console.log("test")
-
 const { createApp, ref } = Vue;
 
 const App = {
@@ -10,7 +8,6 @@ const App = {
 	template: `
 		<div>
 			<NavBar />
-			<Boutique />
 			<Footer />
 		</div>
 	`
