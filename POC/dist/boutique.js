@@ -1,15 +1,12 @@
-
-declare const Vue: any;
-
+"use strict";
 const { createApp, ref } = Vue;
-
 const App = {
-	components: {
-		NavBar,
-		Card,
-		Footer,
-	},
-	template: `
+    components: {
+        NavBar,
+        Card,
+        Footer,
+    },
+    template: `
 		<div>
 			<NavBar />
 			<div class="columns is-multiline">
@@ -24,5 +21,4 @@ const App = {
 		</div>
 	`
 };
-
 createApp(App).mount('#boutique');
