@@ -61,12 +61,64 @@ const Page = {
 			`
 };
 const Card = {
-<<<<<<< HEAD
-    template: 
-	`
-=======
+    setup() {
+        const nom = ref(["Alice", "Bob", "Charlie", "David", "Eve"]);
+        const img = ref('./assets/images/logo_salamander_esport.svg');
+        const taille = ref(null);
+        const ind = Math.floor(Math.random() * nom.value.length);
+        const desc = ref(`Vend ${nom.value[ind]} en biengin`);
+        const changementImage = (newImg) => {
+            img.value = newImg;
+        };
+        const getTaille = () => {
+            if (taille.value == null)
+                return 'Tailles';
+            return taille.value;
+        };
+        const changementTaille = (newTaille) => {
+            taille.value = newTaille;
+        };
+        const isModalVisible = ref(false);
+        const openModal = () => {
+            isModalVisible.value = true;
+        };
+        const closeModal = () => {
+            isModalVisible.value = false;
+        };
+        const getImageInfos = () => {
+            return img.value;
+        };
+        const getRandomNom = () => {
+            return nom.value[ind];
+        };
+        const getDescription = () => {
+            return desc.value;
+        };
+        const getInfos = () => {
+            var _a;
+            return `
+			<p>${getRandomNom()}</p>
+			<p>${getDescription()}</p>
+			<p>Taille : ${(_a = taille.value) !== null && _a !== void 0 ? _a : "Taille pas spécifiée"}</p>
+			`;
+        };
+        return {
+            img,
+            changementImage,
+            isModalVisible,
+            openModal,
+            closeModal,
+            taille,
+            getTaille,
+            changementTaille,
+            getImageInfos,
+            getInfos,
+            getRandomNom,
+            desc,
+            getDescription
+        };
+    },
     template: `
->>>>>>> 3c772702d060ddf7a9c6a3b6eda6127dc996a8bf
 		<div class="columns is-centered m-4">
 			<div class="column is-one-sixth">
 				<div class="card has-background-link has-text-primary">
@@ -74,7 +126,7 @@ const Card = {
 						<figure class="image">
 							<img
 								class="image is-128x128"
-								src="./assets/images/logo_salamander_esport.svg"
+								:src=img
 								alt="Placeholder image"
 							/>
 						</figure>
@@ -82,27 +134,26 @@ const Card = {
 					<div class="card-content">
 						<div class="media">
 							<div class="media-content">
-								<p class="title is-4 has-text-primary">John Smith</p>
-								<p class="subtitle is-6">@johnsmith</p>
+								<p class="title is-4 has-text-primary" id="title">{{getRandomNom()}}</p>
 							</div>
 						</div>
 
-						<div class="content">
-							Vend Salamandre en biengin
+						<div class="content" id="desc">
+							Vend {{getRandomNom()}} en biengin
 						</div>
 						<div class="field is-grouped mt-3">
 							<div class="control">
 								<details class="dropdown is-block">
-									<summary class="button hoverable has-background-primary has-text-primary">Tailles</summary>
+									<summary class="button hoverable has-background-primary has-text-primary">{{getTaille()}}</summary>
 									<div class="dropdown-menu is-block has-background-link">
 										<div class="dropdown-content has-background-link">
 											<ul>
-												<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XXL</a></li>
-												<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XL</a></li>
-												<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">L</a></li>
-												<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">M</a></li>
-												<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">S</a></li>
-												<li><a href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XS</a></li>
+												<li><a @click="changementTaille('XXL')" href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XXL</a></li>
+												<li><a @click="changementTaille('XL')"  href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XL</a></li>
+												<li><a @click="changementTaille('L')"   href="#" class="dropdown-item has-background-link" style="max-width: 60%;">L</a></li>
+												<li><a @click="changementTaille('M')"   href="#" class="dropdown-item has-background-link" style="max-width: 60%;">M</a></li>
+												<li><a @click="changementTaille('S')"   href="#" class="dropdown-item has-background-link" style="max-width: 60%;">S</a></li>
+												<li><a @click="changementTaille('XS')"  href="#" class="dropdown-item has-background-link" style="max-width: 60%;">XS</a></li>
 											</ul>
 										</div>
 									</div>
@@ -110,9 +161,33 @@ const Card = {
 							</div>
 
 							<div class="control">
-								<a class="button hoverable has-background-primary has-text-primary" href="../../Acheter.html">
-									Acheter
-								</a>
+								<details class="dropdown is-block">
+									<summary class="button hoverable has-background-primary has-text-primary">Variantes</summary>
+									<div class="dropdown-menu is-block has-background-link">
+										<div class="dropdown-content has-background-link">
+											<ul>
+												<li><a @click="changementImage('./assets/images/vague_salamander_esport.svg')" href="#" class="dropdown-item has-background-link" style="max-width: 60%;">Vagues</a></li>
+												<li><a @click="changementImage('./assets/images/logo_salamander_esport.svg')" href="#" class="dropdown-item has-background-link" style="max-width: 60%;">Poing</a></li>
+											</ul>
+										</div>
+									</div>
+								</details>
+							</div>
+
+							<div class="control">
+								<button @click="openModal" class="button has-background-primary has-text-primary hoverable">Acheter</button>
+								<div v-if="isModalVisible" class="modal is-active">
+									<div class="modal-background" @click="closeModal"></div>
+									<div class="modal-content">
+										<div class="box has-background-link">
+											<h1 class="title has-background-link">Récap de vos achats</h1>
+											<img class="image is-64x64" :src=img />
+											<p class="has-background-link" v-html="getInfos()"></p>
+											<button @click="closeModal" class="button has-background-danger has-text-white">Fermer</button>
+										</div>
+									</div>
+									<button class="modal-close is-large" @click="closeModal" aria-label="close"></button>
+								</div>
 							</div>
 						</div>
 					</div>

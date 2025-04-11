@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 3c772702d060ddf7a9c6a3b6eda6127dc996a8bf
 // @ts-ignore  
 const { createApp, ref } = Vue;
 
