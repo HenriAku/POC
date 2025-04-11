@@ -21,4 +21,3 @@ const App = {
 	`
 };
 createApp(App).mount('#boutique');
-export {};

@@ -38,7 +38,8 @@ const Footer = {
 		`
 };
 const Card = {
-    template: `<template>
+    template: 
+	`
 		<div class="columns is-centered m-4">
 			<div class="column is-one-sixth">
 				<div class="card has-background-link has-text-primary">

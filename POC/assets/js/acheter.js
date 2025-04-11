@@ -14,4 +14,3 @@ const App = {
 	`
 };
 createApp(App).mount('#acheter');
-export {};
