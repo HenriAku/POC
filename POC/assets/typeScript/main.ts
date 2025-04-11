@@ -6,10 +6,12 @@ const App = {
 	components: {
 		NavBar,
 		Footer,
+		Card
 	},
 	template: `
 		<div>
 			<NavBar />
+			<Card />
 			<Footer />
 		</div>
 	`
