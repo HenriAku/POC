@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+
+declare const Vue: any;
+=======
 // @ts-ignore  
+>>>>>>> 776743a4f6c919f932c8c73d126be60ab864e660
 
 const { createApp, ref } = Vue;
 
