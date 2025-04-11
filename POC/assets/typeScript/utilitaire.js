@@ -42,7 +42,6 @@ const Footer = {
 
 const Card = {
 	template:`
-	<template>
 	<div class="columns is-centered m-4">
 		<div class="column is-one-sixth">
 			<div class="card has-background-link has-text-primary">
@@ -50,7 +49,7 @@ const Card = {
 					<figure class="image">
 						<img
 							class="image is-128x128"
-							src="../assets/logo_salamander_esport.svg"
+							src="./assets/images/logo_salamander_esport.svg" 
 							alt="Placeholder image"
 						/>
 					</figure>
@@ -95,6 +94,6 @@ const Card = {
 			</div>
 		</div>
 	</div>
-</template>
 `
 }
+console.log(Card);

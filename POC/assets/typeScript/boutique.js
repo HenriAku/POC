@@ -12,8 +12,6 @@ const App = {
 		<div>
 			<NavBar />
 			<Card />
-			<Card />
-			<Card />
 			<Footer />
 		</div>
 	`
