@@ -181,7 +181,7 @@ const Card = {
 									<div class="modal-content">
 										<div class="box has-background-link">
 											<h1 class="title has-background-link">Récap de vos achats</h1>
-											<img class="image is-64x64" :src=img />
+											<img class="image is-128x128" :src=img />
 											<p class="has-background-link" v-html="getInfos()"></p>
 											<button @click="closeModal" class="button has-background-danger has-text-white">Fermer</button>
 										</div>
