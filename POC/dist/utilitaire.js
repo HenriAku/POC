@@ -38,8 +38,7 @@ const Footer = {
 		`
 };
 const Card = {
-    template: 
-	`
+    template: `<template>
 		<div class="columns is-centered m-4">
 			<div class="column is-one-sixth">
 				<div class="card has-background-link has-text-primary">
@@ -47,7 +46,7 @@ const Card = {
 						<figure class="image">
 							<img
 								class="image is-128x128"
-								src="./assets/images/logo_salamander_esport.svg"
+								:src=img
 								alt="Placeholder image"
 							/>
 						</figure>
@@ -83,6 +82,20 @@ const Card = {
 							</div>
 
 							<div class="control">
+								<details class="dropdown is-block">
+									<summary class="button hoverable has-background-primary has-text-primary">Variantes</summary>
+									<div class="dropdown-menu is-block has-background-link">
+										<div class="dropdown-content has-background-link">
+											<ul>
+												<li><a @click="changementImage('./assets/images/vague_salamander_esport.svg')" href="#" class="dropdown-item has-background-link" style="max-width: 60%;">Vagues</a></li>
+												<li><a @click="changementImage('./assets/images/logo_salamander_esport.svg')" href="#" class="dropdown-item has-background-link" style="max-width: 60%;">Poing</a></li>
+											</ul>
+										</div>
+									</div>
+								</details>
+							</div>
+
+							<div class="control">
 								<a class="button hoverable has-background-primary has-text-primary" href="../../Acheter.html">
 									Acheter
 								</a>
@@ -94,3 +107,11 @@ const Card = {
 		</div>
 		`
 };
+class Carte {
+    constructor() {
+        this.img = './assets/images/logo_salamander_esport.svg';
+    }
+    changementImage(newImage) {
+        this.img = newImage;
+    }
+}

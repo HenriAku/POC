@@ -1,14 +1,13 @@
+"use strict";
 // @ts-ignore  
-
 const { createApp, ref } = Vue;
-
 const Acheter = {
-	components: {
-		NavBar,
-		Card,
-		Footer,
-	},
-	template: `
+    components: {
+        NavBar,
+        Card,
+        Footer,
+    },
+    template: `
 		<div>
 			<NavBar />
 			<Card />
@@ -16,5 +15,4 @@ const Acheter = {
 		</div>
 	`
 };
-
 createApp(Acheter).mount('#acheter');
