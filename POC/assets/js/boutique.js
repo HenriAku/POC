@@ -1,5 +1,7 @@
+"use strict";
+// @ts-ignore  
 const { createApp, ref } = Vue;
-const App = {
+const Boutique = {
     components: {
         NavBar,
         Card,
@@ -20,4 +22,4 @@ const App = {
 		</div>
 	`
 };
-createApp(App).mount('#boutique');
+createApp(Boutique).mount('#boutique');

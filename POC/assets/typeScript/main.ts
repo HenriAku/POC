@@ -1,5 +1,5 @@
-declare const Vue: any;
 
+// @ts-ignore  
 const { createApp, ref } = Vue;
 
 const App = {
